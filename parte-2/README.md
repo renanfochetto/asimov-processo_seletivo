@@ -1,5 +1,7 @@
 # Hero Section - Curso Python | Processo Seletivo Asimov
 
+🔗 Deploy: https://asimov-parte-2-phi.vercel.app
+
 Este projeto é a Parte 2 do processo seletivo da Asimov Academy. Trata-se de uma Hero Section focada em conversão para um curso de Python e Inteligência Artificial.
 
 A estética visual do projeto é inspirada no **Neo-expressionismo Digital**, uma escolha deliberada para se conectar com o público jovem e técnico. Ao contrário das interfaces "clean" e genéricas de interfaces SaaS, esta proposta utiliza uma linguagem editorial de impacto, tipografia bruta (Raw Design) e referências a terminais Unix clássicos. Essa abordagem não apenas diferencia o produto visualmente no mercado, mas também comunica uma identidade de "código real" e "ferramenta de poder", valores centrais para quem busca se especializar em IA e automação.
