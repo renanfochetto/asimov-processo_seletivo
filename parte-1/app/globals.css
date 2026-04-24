@@ -1,0 +1,11 @@
+@import 'tailwindcss';
+
+@theme inline {
+  --font-sans: var(--font-space-grotesk), 'Space Grotesk', sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-[#191A23];
+  }
+}

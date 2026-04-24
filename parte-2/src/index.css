@@ -1,0 +1,175 @@
+/**
+ * Estilos globais do projeto utilizando Tailwind CSS.
+ * O design segue uma estética de "Neo-expressionismo digital", 
+ * combinando elementos de terminais Unix com design editorial clássico.
+ */
+
+/* Importação das fontes do Google Fonts:
+   - Archivo Black: Usada para títulos pesados (Headline).
+   - JetBrains Mono: Usada para elementos técnicos e código.
+   - Instrument Serif: Usada para notas manuscritas e itálicos editoriais.
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=JetBrains+Mono:wght@300;400;500;700&family=Instrument+Serif:ital@0;1&display=swap');
+
+@layer base {
+  :root {
+    /* Papel envelhecido (Bone / off-white) */
+    --background: 42 24% 92%;
+    --foreground: 0 0% 6%;
+
+    /* Tinta (quase carvão) */
+    --ink: 0 0% 5%;
+    --ink-soft: 0 0% 14%;
+
+    /* Papel */
+    --paper: 42 24% 92%;
+    --paper-deep: 38 18% 86%;
+
+    /* Verde Fósforo (Acid) — Remete a monitores CRT */
+    --acid: 78 100% 52%;
+    --acid-deep: 82 90% 38%;
+
+    /* Sangue (Blood) — Usado para marcações editoriais e erros */
+    --blood: 6 88% 52%;
+
+    /* Ocre — Remete a anotações em papel */
+    --ochre: 36 92% 54%;
+
+    /* Cores do Terminal (Baseadas em esquemas retro) */
+    --terminal-bg: 0 0% 4%;
+    --terminal-fg: 78 100% 70%;
+    --terminal-dim: 78 20% 55%;
+    --terminal-comment: 0 0% 42%;
+    --terminal-string: 36 92% 64%;
+    --terminal-keyword: 6 88% 62%;
+    --terminal-fn: 198 90% 64%;
+    --terminal-num: 280 70% 72%;
+
+    /* Variáveis padrão do shadcn (mantidas para compatibilidade retroativa) */
+    --card: var(--paper);
+    --card-foreground: var(--ink);
+    --popover: var(--paper);
+    --popover-foreground: var(--ink);
+    --primary: var(--ink);
+    --primary-foreground: var(--paper);
+    --secondary: 38 18% 86%;
+    --secondary-foreground: var(--ink);
+    --muted: 38 18% 86%;
+    --muted-foreground: 0 0% 30%;
+    --accent: var(--acid);
+    --accent-foreground: var(--ink);
+    --destructive: var(--blood);
+    --destructive-foreground: var(--paper);
+    --border: 0 0% 8%;
+    --input: 0 0% 8%;
+    --ring: var(--ink);
+    --radius: 0;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-none focus-visible:ring-2 focus-visible:ring-ring;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-mono;
+    /* Padrão de pontos (dotted grid) para simular papel milimetrado */
+    background-image:
+      radial-gradient(hsl(var(--ink) / 0.06) 1px, transparent 1px);
+    background-size: 4px 4px;
+  }
+
+  ::selection {
+    background: hsl(var(--acid));
+    color: hsl(var(--ink));
+  }
+}
+
+@layer utilities {
+  /* Tipografia para títulos de grande impacto */
+  .font-display {
+    font-family: 'Archivo Black', system-ui, sans-serif;
+    letter-spacing: -0.04em;
+    line-height: 0.85;
+  }
+
+  /* Tipografia para anotações manuscritas */
+  .font-serif-italic {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    letter-spacing: -0.02em;
+  }
+
+  /* Tipografia monoespaçada padrão para o projeto */
+  .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+  }
+
+  /* Efeito de granulação para simular papel impresso */
+  .grain::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+    opacity: 0.18;
+    mix-blend-mode: multiply;
+  }
+
+  /* Efeito de linhas de varredura (scanlines) para terminais */
+  .scanlines {
+    background-image: repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 2px,
+      hsl(0 0% 0% / 0.35) 2px,
+      hsl(0 0% 0% / 0.35) 3px
+    );
+  }
+
+  /* Efeito de texto "vazado" (outline) */
+  .text-stroke {
+    -webkit-text-stroke: 1.5px hsl(var(--ink));
+    color: transparent;
+  }
+
+  /* Brilho neon (phosphor glow) */
+  .acid-glow {
+    text-shadow:
+      0 0 1px hsl(var(--acid) / 0.9),
+      0 0 14px hsl(var(--acid) / 0.55),
+      0 0 28px hsl(var(--acid) / 0.35);
+  }
+
+  /* Animação do letreiro digital (ticker) */
+  .ticker-track {
+    animation: ticker 45s linear infinite;
+  }
+
+  @keyframes ticker {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* Cursor piscante do terminal */
+  .blink-caret {
+    animation: blink 1.05s steps(2, start) infinite;
+  }
+
+  @keyframes blink {
+    to { visibility: hidden; }
+  }
+}
