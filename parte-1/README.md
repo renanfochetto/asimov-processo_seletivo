@@ -1,5 +1,7 @@
 # Positivus — Landing Page Agência Digital | Processo Seletivo Asimov
 
+🔗 Deploy: https://asimov-parte-1-inky.vercel.app
+
 Este projeto é a **Parte 1** do processo seletivo da Asimov Academy. Trata-se de uma Landing Page completa para uma agência de marketing digital, desenvolvida com foco em fidelidade visual, performance e acessibilidade.
 
 A estética visual do projeto foi baseada rigorosamente no layout do Figma fornecido pela empresa. A interface utiliza uma linguagem visual moderna, com tipografia clara (**Space Grotesk**), componentes estruturados e um esquema de cores vibrante, focado na experiência do usuário e na clareza da informação.
