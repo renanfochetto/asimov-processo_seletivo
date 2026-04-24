@@ -41,4 +41,4 @@ Este projeto foi construído utilizando uma abordagem moderna de co-criação co
 * **Limpeza Extrema:** Remoção de todas as dependências "morta" (Shadcn UI boilerplate) e otimização do `globals.css`.
 * **Acessibilidade (A11y):** Implementação de semântica HTML5 correta, atributos ARIA, contraste de cores adequado e recurso de "Skip to Content".
 * **Responsividade:** Layout adaptável para dispositivos móveis com grid dinâmico e tipografia fluida.
-* **Internacionalização (i18n-ready):** Centralização de todas as strings do projeto no arquivo `lib/constants.ts`, facilitando manutenções.
+* **Centralização de Conteúdo:** Centralização de todas as strings do projeto no arquivo `lib/constants.ts`, facilitando manutenções.
