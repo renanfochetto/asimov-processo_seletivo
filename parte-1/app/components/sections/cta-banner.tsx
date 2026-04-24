@@ -61,7 +61,7 @@ export default function CtaBanner() {
             }}
           >
             <Image
-              src="/assets/illustrations/cta-illustration.svg"
+              src="/assets/images/cta-illustration.svg"
               alt=""
               fill
               className="object-contain"

@@ -50,7 +50,7 @@ export default function Hero() {
         {/* Right column — hidden on small, shown on lg */}
         <div className="flex-1 flex justify-center w-full max-w-sm lg:max-w-none">
           <Image
-            src="/assets/illustrations/hero-illustration.svg"
+            src="/assets/images/hero-illustration.svg"
             alt="Megafone com ícones de redes sociais representando marketing digital"
             width={600}
             height={515}
