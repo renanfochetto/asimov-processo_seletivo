@@ -1,12 +1,12 @@
-######### # Teste Técnico — Designer / Frontend Dev
+# Teste Técnico — Designer / Frontend Dev
 
 ## Entregáveis
 
 
 |             | Repositório | Deploy |
 | ----------- | ------------ | ------ |
-| **Parte 1** | `/parte-1`   | [link] |
-| **Parte 2** | `/parte-2`   | [link] |
+| **Parte 1** | `/parte-1`   | https://asimov-parte-1-inky.vercel.app |
+| **Parte 2** | `/parte-2`   | https://asimov-parte-2-phi.vercel.app |
 
 ---
 
